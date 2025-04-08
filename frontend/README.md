@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lionsight Video Processing Demo
 
-## Getting Started
+This demo showcases real-time object detection using YOLOv11 neural network.
 
-First, run the development server:
+## Features
+
+- Real-time video processing from webcam or other camera sources
+- Configurable object detection classes
+- Adjustable confidence threshold
+- Real-time statistics and visualization
+- Historical tracking of detections
+
+## Setup
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Download the YOLOv11 model:
+
+```bash
+npm run download-model
+```
+
+3. Install Python dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open your browser and navigate to http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Click on "Video Processing Demo" in the navigation bar
+2. Select your camera from the dropdown
+3. Adjust the confidence threshold slider as needed
+4. Select the classes you want to detect
+5. Click "Start Processing" to begin real-time object detection
+6. View the real-time statistics and charts on the right side
 
-## Learn More
+## Troubleshooting
 
-To learn more about Next.js, take a look at the following resources:
+- If you encounter issues with the model, make sure it's properly downloaded using `npm run download-model`
+- If the camera doesn't work, check your browser permissions
+- If the detection is slow, try reducing the number of selected classes or increasing the confidence threshold
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technical Details
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Frontend: Next.js with TypeScript and Tailwind CSS
+- Backend: Python script using YOLOv11 for object detection
+- Charts: Chart.js for real-time visualization

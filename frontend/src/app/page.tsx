@@ -14,6 +14,7 @@ export default function Home() {
             <div className="hidden md:flex items-center space-x-8">
               <Link href="#features" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Features</Link>
               <Link href="#about" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">About</Link>
+              <Link href="/video-processing" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Video Processing Demo</Link>
               <Link href="/login" className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700">Login</Link>
             </div>
           </div>
